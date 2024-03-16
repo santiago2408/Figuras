@@ -1,0 +1,35 @@
+@startuml
+
+class Figura {
+    +dibujar()
+    +calcularArea()
+}
+
+class Rectangulo {
+    +calcularPerimetro()
+}
+
+class Cuadrado {
+    +calcularPerimetro()
+}
+
+class Circulo {
+    +calcularCircunferencia()
+}
+
+class FiguraServlet {
+    +doGet()
+    +doPost()
+    -obtenerDatosFigura(): <Figura>
+}
+
+class IndexHTML
+
+Rectangulo --|> Figura
+Cuadrado --|> Figura
+Circulo --|> Figura
+FiguraServlet --|> HttpServlet
+Figura -- FiguraServlet: << utiliza >>
+IndexHTML -> FiguraServlet
+
+@enduml

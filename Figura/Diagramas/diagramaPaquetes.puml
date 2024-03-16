@@ -1,0 +1,29 @@
+@startuml
+!theme plain
+package "WEB-INF" {
+    class Index
+    
+}
+
+package "Source Packages" {
+    package "Data"{
+
+    }
+
+    package "Logica"{
+        class Figura
+        class Circulo
+        class Rectangulo
+        class Cuadrado
+
+    }
+
+    package "ServletFigura"{
+        class ServletFigura
+
+    }
+}
+
+Figura -o ServletFigura
+ServletFigura <- Index
+@enduml

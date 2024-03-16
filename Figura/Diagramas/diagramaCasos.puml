@@ -1,0 +1,13 @@
+@startuml
+
+actor Usuario as User
+actor Sistema as System
+
+rectangle "Gestión de Figuras" {
+    User --> (Ingresar Datos)
+    (Ingresar Datos) --> (Enviar Formulario)
+    (Enviar Formulario) --> (Calcular Área y Perímetro)
+    (Calcular Área y Perímetro) --> (Mostrar Resultados)
+}
+
+@enduml
